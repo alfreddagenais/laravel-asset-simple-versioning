@@ -1,11 +1,11 @@
 <?php
 
-function checkFolderPath($path): String
+function checkFolderPath(string $path): string
 {
     return str_replace(array('//', '///', '////', '/////', '//////', '///////', '////////'), '/', $path);
 }
 
-function assetVersion($path)
+function assetVersion(string $path): string
 {
 
     $publicFolder = env('APP_FOLDER_PUBLIC', '');
